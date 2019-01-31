@@ -61,7 +61,7 @@ def scrape_data():
             # fighter's name
             n = soup.find('span', {'class': 'b-content__title-highlight'})
             f_name.append(n.text.strip())
-            print(f"Scraping the following fighter: {n.text.strip()}")
+            #print(f"Scraping the following fighter: {n.text.strip()}")
 
             # record
             rec = soup.find('span', {'class': 'b-content__title-record'})
