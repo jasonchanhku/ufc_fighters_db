@@ -6,7 +6,7 @@ import string
 import re
 import datetime
 import sqlite3
-
+import time
 # created a list of links beforehand to iterate over
 
 # list to store of page links
@@ -57,11 +57,11 @@ def scrape_data():
         for fighter in fighters:
             data = requests.get(fighter)
             soup = BeautifulSoup(data.text, 'html.parser')
-
+            time.sleep(2)
             # fighter's name
             n = soup.find('span', {'class': 'b-content__title-highlight'})
             f_name.append(n.text.strip())
-            #print(f"Scraping the following fighter: {n.text.strip()}")
+            print(f"Scraping the following fighter: {n.text.strip()}")
 
             # record
             rec = soup.find('span', {'class': 'b-content__title-record'})
