@@ -3,6 +3,5 @@
 # Find out more: https://morph.io/documentation/python
 
 beautifulsoup4==4.6.0
-bs4==0.01
 pandas==0.23.0
 numpy==1.14.3
